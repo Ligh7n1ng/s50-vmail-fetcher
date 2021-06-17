@@ -1,0 +1,7 @@
+[Unit]
+Description=Processing voicemails for storage
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/html/pbx/
+ExecStart=/usr/bin/bash /usr/bin/vmail-process.sh "/srv/samba/yeastar-voicemail/voicemail/default/1007/INBOX" "/var/vmail/" "/var/www/html/pbx/Голосовая почта"
